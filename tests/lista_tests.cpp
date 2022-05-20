@@ -2,6 +2,10 @@
 #include "../src/Lista.h"
 
 /**
+ * To run these tests first unzip gtest-1.8.1.zip in the /tests directory
+ */
+
+/**
  * Para correr valgrind:
  * - Seleccionar arriba a la derecha la opción "correrValgrind"
  * - Hacer build del proyecto (Ctrl+F9)
