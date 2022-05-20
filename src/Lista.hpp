@@ -1,7 +1,8 @@
 #include "Lista.h"
 #include <iostream>
 
-Lista::Lista() : longitud_(0), head_(nullptr), last_(nullptr) {}
+Lista::Lista() : longitud_(0), head_(nullptr), last_(nullptr)
+{}
 
 Lista::Lista(const Lista &l) : Lista()
 {
@@ -110,4 +111,21 @@ int &Lista::iesimo(Nat i)
         actual = actual->siguiente;
     }
     return actual->elem;
+}
+
+void Lista::mostrar(ostream &o)
+{
+    Nodo *actual = nullptr;
+    o << "[";
+    if (head_ != nullptr)
+    {
+        o << head_->elem;
+        actual = head_->siguiente;
+        while(actual != nullptr)
+        {
+            o << ", " << actual->elem;
+            actual = actual->siguiente;
+        }
+    }
+    o << "]";
 }
